@@ -1,0 +1,30 @@
+{{define "Crear"}}
+{{template "encabezado"}}
+
+<div class="card">
+    <div class="card-header">
+        Empleados
+    </div>
+
+    <div class="card-body">
+        <form method="post" action="/Insertar">
+            <div class="form-group">
+                <label for="">nombre:</label>
+                <input type="text" class="form-control" name="nombre" id="nombre" aria-describeby="helpId" placeholder="">
+                <small id="helpId" class="form-text text-muted">Ingresa tu correo nombre</small>
+            </div>
+
+            <div class="form-group">
+                <label for="">Correo:</label>
+                <input type="email" class="form-control" name="correo" id="correo" aria-describeby="emailHelpId" placeholder="">
+                <small id="emailHelpId" class="form-text text-muted">Ingresa tu correo electronico</small>
+            </div>
+
+            <button type="submit" class="btn btn-success">Agregar nuevo empleado</button>
+            <a name="" id="" class="btn btn-danger" href="/" role="button">Cancelar</a>
+        </form>
+    </div>
+</div>
+
+{{template "pie"}}
+{{end}}
